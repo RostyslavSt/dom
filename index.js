@@ -31,10 +31,8 @@ function moveData() {
 	// var studentAtUniversity = document.querySelector('input.student-at-university').value;
 	// document.querySelector('span.student-age').innerHTML = studentAgeValue;
 
-	var studentCourse = document.querySelectorAll('student-course');
-	// var studentCourse2 = document.querySelectorAll('student-course')[1].value;
-	// studentCourse1 = document.querySelectorAll('student-course')[0].value;
-	// studentCourse1 = document.querySelectorAll('student-course')[1].value;
+	var studentCourse = document.querySelectorAll('input.student-course');
+	console.log(studentCourse);
 	document.querySelector('span.student-courses').innerHTML = studentCourse[0].value + ', ' + studentCourse[1].value;
 
 }
