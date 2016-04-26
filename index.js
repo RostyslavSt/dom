@@ -17,7 +17,15 @@ function initAge() {
 }
 
 function validateData() {
-	
+	var studentNameValue = document.querySelector('input.student-name').value;
+
+
+	var studentAgeValue = +document.querySelector('select.student-age').value;
+	if (studentAgeValue < 1 || studentAgeValue > 99) return false;
+
+	if 
+	return true;
+
 }
 
 function moveData() {
@@ -57,6 +65,18 @@ function formSubmitHandler() {
 
 		
 	});
+}
+
+
+function addCourseHandler() {
+	var addCourseButton = document.querySelector('a.add-course');
+	var form  = document.querySelector('form');
+
+	addCourseButton.addEventListener()
+}
+
+function removeCourseHandler() {
+	
 }
 
 window.addEventListener('load', function() {
