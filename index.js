@@ -28,13 +28,21 @@ function moveData() {
 	document.querySelector('span.student-age').innerHTML = studentAgeValue;
 
 	// func checbox
-	var studentAtUniversity = document.querySelector('input.student-at-university').checked;
-	console.log(studentAtUniversity);	
+	var studentAtUniversity = document.querySelector('input.student-at-university')
+										 .checked ? 'yes': 'No';
 	document.querySelector('span.student-at-university').innerHTML = studentAtUniversity;
 
 	// func for courses
-	var studentCourse = document.querySelectorAll('input.student-course');
-	document.querySelector('span.student-courses').innerHTML = studentCourse[0].value + ', ' + studentCourse[1].value;
+	var studentCoursesInputs = document.querySelectorAll('input.student-course');
+	var studentCoursesValue = '';
+	for (iterator = 0; iterator < studentCoursesInputs.length; iterator++) {
+		studentCoursesValue += studentCoursesInputs[iterator].value + ', ';
+	}
+
+	document.querySelector('span.student-courses').innerHTML = 
+				studentCoursesValue.substr(0, studentCoursesValue.length - 2);
+	// document.querySelector('span.student-courses').innerHTML = studentCourses[0].value + 
+	// 							', ' + studentCourses[1].value;
 
 }
 
