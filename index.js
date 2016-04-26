@@ -28,11 +28,12 @@ function moveData() {
 	document.querySelector('span.student-age').innerHTML = studentAgeValue;
 
 	// func checbox
-	// var studentAtUniversity = document.querySelector('input.student-at-university').value;
-	// document.querySelector('span.student-age').innerHTML = studentAgeValue;
+	var studentAtUniversity = document.querySelector('input.student-at-university').checked;
+	console.log(studentAtUniversity);	
+	document.querySelector('span.student-at-university').innerHTML = studentAtUniversity;
 
+	// func for courses
 	var studentCourse = document.querySelectorAll('input.student-course');
-	console.log(studentCourse);
 	document.querySelector('span.student-courses').innerHTML = studentCourse[0].value + ', ' + studentCourse[1].value;
 
 }
